@@ -1,0 +1,64 @@
+<mat-sidenav-container class="sidenav-container ">
+    <mat-sidenav #sidenav [mode]="mode.value" class="side-menu">
+        <p>
+            <button mat-button (click)="sidenav.toggle()">
+                <mat-icon class="mat-icon material-icons app-name">menu</mat-icon>
+                <span class="app-name">App</span>
+            </button>
+
+        </p>
+        <p class="side-break"></p>
+        <p>
+            <!-- content -->
+        </p>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <button mat-button (click)="sidenav.toggle()">
+                <mat-icon class="mat-icon material-icons">menu</mat-icon>
+            </button> MyApp
+
+            <!-- This fills the remaining space of the current row -->
+            <span class="fill-remaining-space"></span>
+
+            <button mat-button [matMenuTriggerFor]="notifications">
+                <mat-icon class="mat-icon material-icons">notifications</mat-icon>
+            </button>
+            <mat-menu #notifications="matMenu">
+                <button mat-menu-item>notifications 1</button>
+                <button mat-menu-item>notifications 2</button>
+            </mat-menu>
+
+
+            <button mat-button [matMenuTriggerFor]="menu">
+                <mat-icon class="mat-icon material-icons">person</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon class="mat-icon material-icons">settings</mat-icon>&nbsp;&nbsp;settings&nbsp;&nbsp;
+                </button>
+                <button mat-menu-item>
+                    <mat-icon class="mat-icon material-icons">notifications</mat-icon>&nbsp;&nbsp;notifications_off&nbsp;&nbsp;
+                </button>
+                <button mat-menu-item>
+                    <mat-icon class="mat-icon material-icons">exit_to_app</mat-icon>&nbsp;&nbsp;Sign Out&nbsp;&nbsp;
+                </button>
+
+            </mat-menu>
+        </mat-toolbar>
+        <p>
+            <button mat-button (click)="sidenav.toggle()">
+                <mat-icon class="mat-icon material-icons">menu</mat-icon> MyApp
+            </button>
+        </p>
+        <p>
+            <!-- content -->
+        </p>
+
+        <div *ngIf='true'>
+            <router-outlet></router-outlet>
+        </div>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>
