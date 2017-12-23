@@ -2,7 +2,8 @@
 
 # Base
 
-1 .  install nodejs from [https://nodejs.org/en/](https://nodejs.org/en/)
+1 . Download VS Code [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
+2 . Install nodejs from [https://nodejs.org/en/](https://nodejs.org/en/)
 
 
 # Angular Cli Command line
