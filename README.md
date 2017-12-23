@@ -1,6 +1,6 @@
-Angular 
+# Angular 
 
-# Requirement (Recommend )
+## Requirement (Recommend )
 
 - 1 . Download VS Code [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
 
@@ -12,7 +12,7 @@ Angular
 
 - 5 . Install Angular Cli from [https://cli.angular.io/](https://cli.angular.io/)
 
-# Angular Cli Command line
+## Angular Cli Command line
 
 ```javascript
 
@@ -30,7 +30,7 @@ $ ng g s services/backendApi --module=services/services.module
 
 ```
 
-# Angular 5 +  Angular Material INIT
+## Angular 5 +  Angular Material INIT
 
 ```javascript
 
@@ -158,7 +158,7 @@ export class MaterialsModule { }
 
 ```
 
-# VS Code settings.json
+## VS Code settings.json
 
 ```javascript
 {
@@ -183,7 +183,7 @@ export class MaterialsModule { }
 
 
 ```
-# VS Code Extensions
+## VS Code Extensions
 
 ```javascript
 - Angular Material 2, Flex layout 1
