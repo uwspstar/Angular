@@ -4,12 +4,13 @@
 
 - 1 . Download VS Code [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
 
-- 2 . Install nodejs from [https://nodejs.org/en/](https://nodejs.org/en/)
+- 2 . Install Git from [https://git-scm.com/](https://git-scm.com/)
 
-- 3 . Install Git from [https://git-scm.com/](https://git-scm.com/)
+- 3 . Install sourctree from [https://www.sourcetreeapp.com/](https://www.sourcetreeapp.com/)
 
-- 4 . Install sourctree from [https://www.sourcetreeapp.com/](https://www.sourcetreeapp.com/)
+- 4 . Install nodejs from [https://nodejs.org/en/](https://nodejs.org/en/)
 
+- 5 . Install Angular Cli from [https://cli.angular.io/](https://cli.angular.io/)
 
 # Angular Cli Command line
 
