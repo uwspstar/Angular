@@ -1,5 +1,19 @@
 # Angular 
 
+# Angular Cli Command line
+
+```javascript
+
+$ ng new demoMT --style=scss --routing
+
+$ ng g c ui/header --dry-run
+
+$ ng g s services/backendApi --module=app.module
+
+$ ng g s services/backendApi --module=app.module
+
+```
+
 # Angular 5 +  Angular Material INIT
 
 ```javascript
