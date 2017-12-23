@@ -1,6 +1,6 @@
 # Angular 
 
-# Base
+# Requirement (Recommend )
 
 - 1 . Download VS Code [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
 
