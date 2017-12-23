@@ -1,5 +1,10 @@
 # Angular 
 
+# Base
+
+1 .  install nodejs from [https://nodejs.org/en/](https://nodejs.org/en/)
+
+
 # Angular Cli Command line
 
 ```javascript
