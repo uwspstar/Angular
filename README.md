@@ -27,6 +27,7 @@ $ ng g s services/backendApi --module=app.module
 // with special moule
 $ ng g s services/backendApi --module=services/services.module 
 
+
 ```
 
 # Angular 5 +  Angular Material INIT
@@ -154,5 +155,53 @@ import { MatButtonModule } from '@angular/material/button';
   ]
 })
 export class MaterialsModule { }
+
+```
+
+# Vscode settings.json
+
+```javascript
+{
+    "workbench.sideBar.location": "right",
+    "window.zoomLevel": 2,
+    "vsicons.projectDetection.autoReload": true,
+    "workbench.iconTheme": "vscode-icons",
+    "editor.formatOnSave": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "node_modules": true
+    },
+    "workbench.colorCustomizations": {
+        "terminal.foreground": "#00FD61",
+        "terminal.background": "#383737"
+    }
+}
+
+
+```
+# vscode Extensions
+
+```javascript
+- Angular Material 2, Flex layout 1
+- Angular v4 TypeScript Snippets
+- ASP.NET Helper
+- Auto Import
+- Bracket Pair Colorizer
+- C#
+- C# Extensions
+- Docker
+- JS-CSS-HTML Formatter
+- Move TS
+- mssql
+- Path Intellisense
+- REST Cliet
+- TSLint
+- TypeScript Hero
+- vscode-icons
+
 
 ```
