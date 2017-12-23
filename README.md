@@ -12,6 +12,9 @@ $ ng g s services/backendApi --module=app.module
 
 $ ng g s services/backendApi --module=app.module
 
+// with special moule
+$ ng g s services/backendApi --module=services/services.module 
+
 ```
 
 # Angular 5 +  Angular Material INIT
