@@ -158,7 +158,7 @@ export class MaterialsModule { }
 
 ```
 
-# Vscode settings.json
+# VS Code settings.json
 
 ```javascript
 {
@@ -183,7 +183,7 @@ export class MaterialsModule { }
 
 
 ```
-# Vscode Extensions
+# VS Code Extensions
 
 ```javascript
 - Angular Material 2, Flex layout 1
