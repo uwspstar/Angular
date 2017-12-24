@@ -205,3 +205,11 @@ export class MaterialsModule { }
 
 
 ```
+
+## NOTE : 
+
+```javascript
+
+- To be able to use 'ngModel' the FormsModule (from @angular/forms) needs to be added to your imports[] array in the AppModule (should be there by default in a CLI project)!
+
+```
