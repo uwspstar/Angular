@@ -226,4 +226,4 @@ import { FormsModule } from '@angular/forms';
 - [Angular Firebase](https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA/featured)
 
 ### Udemy
-- 
+- [The Complete Angular Course: Beginner to Advanced](https://www.udemy.com/the-complete-angular-master-class/learn/v4/overview)
