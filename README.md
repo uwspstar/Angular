@@ -217,6 +217,13 @@ import { FormsModule } from '@angular/forms';
 ```
 ## Others Resource
 
+### 
 - JSONPlaceholder [https://jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/)
 - Placeholder Images [http://lorempixel.com/](http://lorempixel.com/)
 - Swagger Codegen Document Tool [https://swagger.io/](https://swagger.io/)
+
+### YouTube 
+- [Angular Firebase](https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA/featured)
+
+### Udemy
+- 
