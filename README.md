@@ -205,7 +205,7 @@ export class MaterialsModule { }
 ```
 ## Security
 ```
--  Frontend security is great for the user experience, but does not provide real security.
+-  Frontend security is great for the user experience, but does not provide real security. Backend database rules is the only way to truly protect your data.
 
 ```
 
