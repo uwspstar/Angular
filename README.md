@@ -206,10 +206,14 @@ export class MaterialsModule { }
 
 ```
 
-## NOTE : 
+## FormsModule is Required for Two-Way-Binding! : 
 
 ```javascript
 
-- To be able to use 'ngModel' the FormsModule (from @angular/forms) needs to be added to your imports[] array in the AppModule (should be there by default in a CLI project)!
+Important: For Two-Way-Binding to work, you need to enable the ngModel  directive. This is done by adding the FormsModule  to the imports[]  array in the AppModule.
+
+You then also need to add the import from @angular/forms  in the app.module.ts file:
+
+import { FormsModule } from '@angular/forms'; 
 
 ```
