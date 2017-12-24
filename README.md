@@ -203,6 +203,11 @@ export class MaterialsModule { }
 
 
 ```
+## Security
+```
+-  Frontend security is great for the user experience, but does not provide real security.
+
+```
 
 ## FormsModule is Required for Two-Way-Binding! : 
 
