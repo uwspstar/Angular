@@ -217,3 +217,7 @@ You then also need to add the import from @angular/forms  in the app.module.ts f
 import { FormsModule } from '@angular/forms'; 
 
 ```
+## Others
+
+- [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
+- Placeholder Images [http://lorempixel.com/](http://lorempixel.com/)
