@@ -215,11 +215,13 @@ You then also need to add the import from @angular/forms  in the app.module.ts f
 import { FormsModule } from '@angular/forms'; 
 
 ```
-## Others Resource
+# Others Resource
 
-### 
+### Online Placeholder
 - JSONPlaceholder [https://jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/)
-- Placeholder Images [http://lorempixel.com/](http://lorempixel.com/)
+- Images Placeholder [http://lorempixel.com/](http://lorempixel.com/)
+
+### Document Tool
 - Swagger Codegen Document Tool [https://swagger.io/](https://swagger.io/)
 
 ### YouTube 
