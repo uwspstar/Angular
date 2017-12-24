@@ -22,9 +22,6 @@ $ ng new demoMT --style=scss --routing
 $ ng g c ui/header --dry-run
 
 $ ng g s services/backendApi --module=app.module
-
-$ ng g s services/backendApi --module=app.module
-
 // with special moule
 $ ng g s services/backendApi --module=services/services.module 
 
@@ -222,4 +219,4 @@ import { FormsModule } from '@angular/forms';
 
 - JSONPlaceholder[https://jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/)
 - Placeholder Images [http://lorempixel.com/](http://lorempixel.com/)
-- Swagger Codegen: [https://swagger.io/](https://swagger.io/)
+-  Swagger Codegen Document Tool [https://swagger.io/](https://swagger.io/)
