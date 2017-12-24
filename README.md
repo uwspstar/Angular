@@ -1,4 +1,5 @@
 # Angular 
+- Angular [https://angular.io](https://angular.io)
 
 ## Requirement (Recommend )
 
@@ -217,7 +218,8 @@ You then also need to add the import from @angular/forms  in the app.module.ts f
 import { FormsModule } from '@angular/forms'; 
 
 ```
-## Others
+## Others Resource
 
-- [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
+- JSONPlaceholder[https://jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/)
 - Placeholder Images [http://lorempixel.com/](http://lorempixel.com/)
+- Swagger Codegen: [https://swagger.io/](https://swagger.io/)
