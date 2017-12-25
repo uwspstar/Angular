@@ -19,11 +19,16 @@
 
 $ ng new demoMT --style=scss --routing
 
+//Build Optimizer v5
+$ ng build --prod --aot=true --build-optimizer.
+
+
 $ ng g c ui/header --dry-run
 
 $ ng g s services/backendApi --module=app.module
 // with special moule
 $ ng g s services/backendApi --module=services/services.module 
+
 
 
 ```
