@@ -208,6 +208,34 @@ export class MaterialsModule { }
 
 
 ```
+
+## Rxjs import
+```
+import { Rx } from 'rxjs/Rx';
+
+//Observable, Observer, BehaviorSubject, Subject, ReplaySubject
+import {Observable} from 'rxjs/Observable';
+import {Observer} from 'rxjs/Observer';
+import {BehaviorSubject} from 'rxjs/BehaviorSubject';
+import {Subject} from 'rxjs/Subject';
+import {ReplaySubject} from 'rxjs/ReplaySubject';
+
+import { concat,empty } from 'rxjs/observable';
+
+Observable.from()
+Observable.of()
+
+import { map, filter } from 'rxjs/operators';
+/* rxjs/operators
+audit, buffer, catch, combineAll, combineLatest, concat, count, debounce, delay, 
+distinct, do, every, expand, filter, finally, find , first, groupBy,
+ignoreElements, isEmpty, last, let, map, max, merge, mergeMap, min, pluck, 
+publish, race, reduce, repeat, scan, skip, startWith, switch, switchMap, take, 
+takeUntil, throttle, timeout, toArray, toPromise, withLatestFrom, zip
+ */
+
+```
+
 ## Security
 ```
 -  Frontend security is great for the user experience, but does not provide real security. Backend database rules is the only way to truly protect your data.
