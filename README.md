@@ -255,6 +255,9 @@ import { FormsModule } from '@angular/forms';
 ```
 # Others Resource
 
+### Backend Service
+- json-server [https://github.com/typicode/json-server](https://github.com/typicode/json-server)
+
 ### Online Placeholder
 - JSONPlaceholder [https://jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/)
 - Images Placeholder [http://lorempixel.com/](http://lorempixel.com/)
