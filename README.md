@@ -19,7 +19,7 @@
 
 $ ng new demoMT --style=scss --routing
 
-//Build Optimizer v5
+//Build Optimizer v5 $ ng build --prod
 $ ng build --prod --aot=true --build-optimizer.
 
 
