@@ -206,7 +206,8 @@ export class MaterialsModule { }
 - TypeScript Hero
 - vscode-icons
 
-
+//https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2
+- Angular v5 Snippets
 ```
 
 ## Directive
