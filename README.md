@@ -209,6 +209,17 @@ export class MaterialsModule { }
 
 ```
 
+## Directive
+
+```javascript
+
+<tr *ngFor="let hero of heroes; let i = index">
+    <td>{{hero.name}}</td>
+    <td>{{i}}</td>
+</tr>
+
+```
+
 ## Rxjs import
 ```
 import { Rx } from 'rxjs/Rx';
@@ -267,6 +278,7 @@ import { FormsModule } from '@angular/forms';
 
 ### YouTube 
 - [Angular Firebase](https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA/featured)
+- [Angular University](https://www.youtube.com/channel/UC3cEGKhg3OERn-ihVsJcb7A)
 
 ### Udemy
 - [The Complete Angular Course: Beginner to Advanced](https://www.udemy.com/the-complete-angular-master-class/learn/v4/overview)
