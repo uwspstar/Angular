@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { MaterialsModule } from './materials/materials.module';
 import { HomeComponent } from './ui/home/home.component';
 import { LoginComponent } from './ui/login/login.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +19,9 @@ import { LoginComponent } from './ui/login/login.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MaterialsModule
+    MaterialsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

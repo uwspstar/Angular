@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('//fonts.googleapis.com/icon?family=Material+Icons');
+
+
+  .side-menu{
+    min-width: 280px;
+    color: #FF5318;
+  
+    background-color: #282828 !important;
+  }
+  .app-color{
+    color: red;
+  }
+  .app-color-white{
+    color: #fff;
+  }
+  .app-name{
+    font-size: 2rem;
+    margin:8px;
+  }
+  .side-break{
+    /*background-color:#000 !important;*/
+    height: 2px;
+  }
+  .flex-box{
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 16px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+  }
+  .fill-remaining-space {
+    // This fills the remaining space, by using flexbox. 
+    // Every toolbar row uses a flexbox row layout.
+    flex: 1 1 auto;
+  }
+
+  img.avart{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  div.space{
+    width:12px;
+    height: 1px;
+    margin: 6px;
+  }
+  div.main-content-box{
+    margin:auto;
+    padding: 2rem;
+  }
+   

@@ -1,0 +1,86 @@
+<mat-sidenav-container class="sidenav-container ">
+    <mat-sidenav #sidenav [mode]="mode.value" class="side-menu">
+        <p>
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon class="mat-icon material-icons app-name">chevron_left</mat-icon>
+                <span class="app-name app-color">App</span>
+            </button>
+
+        </p>
+        <p class="side-break"></p>
+        <p>
+            <!-- content -->
+        </p>-
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon class="mat-icon material-icons">menu</mat-icon>
+            </button>
+            <div class="space"></div>
+            <span class="app-name app-color-white">SABER</span>
+
+            <!-- This fills the remaining space of the current row -->
+            <span class="fill-remaining-space"></span>
+
+            <button mat-icon-button [matMenuTriggerFor]="notifications">
+                <mat-icon class="mat-icon material-icons">notifications</mat-icon>
+            </button>
+            <mat-menu #notifications="matMenu">
+                <button mat-menu-item>system update weekend</button>
+                <button mat-menu-item>update version 2.0</button>
+            </mat-menu>
+
+            <div class="space"></div>
+            <button mat-icon-button [matMenuTriggerFor]="user">
+
+                <img src="assets/img/avart1.png" alt="user" class="avart">
+
+            </button>
+            <mat-menu #user="matMenu">
+                <button mat-menu-item>
+                    <mat-icon class="mat-icon material-icons">person</mat-icon>&nbsp;&nbsp;Bob (Admin)&nbsp;&nbsp;
+                </button>
+                <hr>
+                <button mat-menu-item>
+                    <mat-icon class="mat-icon material-icons">business_center</mat-icon>&nbsp;&nbsp;View Profile&nbsp;&nbsp;
+                </button>
+                <button mat-menu-item>
+                    <mat-icon class="mat-icon material-icons">exit_to_app</mat-icon>&nbsp;&nbsp;Sign Out&nbsp;&nbsp;
+                </button>
+            </mat-menu>
+            <div class="space"></div>
+
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon class="mat-icon material-icons">more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon class="mat-icon material-icons">settings</mat-icon>&nbsp;&nbsp;Settings&nbsp;&nbsp;
+                </button>
+                <button mat-menu-item>
+                    <mat-icon class="mat-icon material-icons">notifications</mat-icon>&nbsp;&nbsp;Notifications_off&nbsp;&nbsp;
+                </button>
+
+                <button mat-menu-item>
+                    <mat-icon class="mat-icon material-icons">share</mat-icon>&nbsp;&nbsp;Share&nbsp;&nbsp;
+                </button>
+                <hr>
+
+                <button mat-menu-item>
+                    <mat-icon class="mat-icon material-icons">help</mat-icon>&nbsp;&nbsp;Help&nbsp;&nbsp;
+                </button>
+
+            </mat-menu>
+        </mat-toolbar>
+
+        <!-- content -->
+        <div class="main-content-box">
+            <div *ngIf='true'>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

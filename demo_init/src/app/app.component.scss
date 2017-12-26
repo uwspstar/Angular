@@ -1,0 +1,33 @@
+.sidenav-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .sidenav-radio-group {
+    display: block;
+    border: 1px solid #555;
+    margin: 20px;
+    padding: 10px;
+  }
+
+  .side-menu{
+    min-width: 280px;
+    color: #FF5318;
+    background-color: #282828 !important;
+  }
+  .app-name{
+    font-size: 2rem;
+    margin:8px;
+  }
+  .side-break{
+    background-color:#000 !important;
+    height: 2px;
+  }
+  .fill-remaining-space {
+    // This fills the remaining space, by using flexbox. 
+    // Every toolbar row uses a flexbox row layout.
+    flex: 1 1 auto;
+  }
