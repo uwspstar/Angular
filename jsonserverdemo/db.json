@@ -1,0 +1,19 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "product cSharp-abc",
+            "price": 10
+        },
+        {
+            "id": 2,
+            "name": "product javscript-xyz",
+            "price": 200
+        },
+        {
+            "id": 3,
+            "name": "product angular-v5",
+            "price": 1000
+        }
+    ]
+}
