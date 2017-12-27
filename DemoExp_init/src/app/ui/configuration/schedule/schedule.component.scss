@@ -1,0 +1,32 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+  }
+  
+  .example-header {
+    min-height: 64px;
+    padding: 8px 24px 0;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }
+  
+  .detail > .mat-icon {
+    font-size: 28px !important;
+    line-height: 34px;
+    padding: 0px;
+  }
+
+  .edit-cell{
+    border : 1px solid gray;
+    background-color: #eee;
+    padding: 3px;
+  }

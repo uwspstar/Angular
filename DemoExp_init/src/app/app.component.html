@@ -1,0 +1,115 @@
+<mat-sidenav-container class="sidenav-container ">
+    <mat-sidenav #sidenav [mode]="mode.value" class="side-menu">
+        <div class="side-header-box">
+            <img src="assets/img/logo.png" alt="user" class="side-menu-img">
+            <img src="assets/img/saber.png" alt="user" class="side-menu-img2">
+            <button mat-icon-button (click)="sidenav.toggle(); onNavMenu()" class="clear">
+                <mat-icon class="mat-icon material-icons">clear</mat-icon>
+            </button>
+        </div>
+
+        <p>
+            <a mat-menu-item routerLink="/dashboard">
+                <mat-icon class="mat-icon material-icons">dashboard</mat-icon>&nbsp;&nbsp;Dashboard&nbsp;&nbsp;
+            </a>
+
+            <a mat-menu-item routerLink="/product">
+                <mat-icon class="mat-icon material-icons">view_compact</mat-icon>&nbsp;&nbsp;Products&nbsp;&nbsp;
+            </a>
+
+            <a mat-menu-item routerLink="/configset">
+                <mat-icon class="mat-icon material-icons">list</mat-icon>&nbsp;&nbsp;Config Sets&nbsp;&nbsp;
+            </a>
+
+            <a mat-menu-item routerLink="/configfile">
+                <mat-icon class="mat-icon material-icons">description</mat-icon>&nbsp;&nbsp;Config files&nbsp;&nbsp;
+            </a>
+
+            <a mat-menu-item routerLink="/schedule">
+                <mat-icon class="mat-icon material-icons">date_range</mat-icon>&nbsp;&nbsp;Schedule&nbsp;&nbsp;
+            </a>
+            <a mat-menu-item routerLink="/event">
+                <mat-icon class="mat-icon material-icons">event_available</mat-icon>&nbsp;&nbsp;Events&nbsp;&nbsp;
+            </a>
+
+        </p>
+
+        <p class="side-bottom">
+            <a mat-menu-item routerLink="/help">
+                <mat-icon class="mat-icon material-icons">help</mat-icon>&nbsp;&nbsp;Help&nbsp;&nbsp;
+            </a>
+        </p>
+        <p>
+
+        </p>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <button *ngIf="isFlag" mat-icon-button opened="true" (click)="sidenav.toggle(); onNavMenu()">
+                <mat-icon class="mat-icon material-icons">menu</mat-icon>
+            </button>
+            <div class="space"></div>
+            <span class="app-name app-color-white">SABER</span>
+
+            <!-- This fills the remaining space of the current row -->
+            <span class="fill-remaining-space"></span>
+
+            <a mat-icon-button [matMenuTriggerFor]="notifications">
+                <mat-icon class="mat-icon material-icons">notifications</mat-icon>
+            </a>
+            <mat-menu #notifications="matMenu">
+                <button mat-menu-item>system update weekend</button>
+                <button mat-menu-item>update version 2.0</button>
+            </mat-menu>
+
+            <div class="space"></div>
+            <a mat-icon-button [matMenuTriggerFor]="user">
+                <img src="assets/img/avart1.png" alt="user" class="avart">
+            </a>
+            <mat-menu #user="matMenu">
+                <a mat-menu-item>
+                    <mat-icon class="mat-icon material-icons">face</mat-icon>&nbsp;&nbsp;Bob&nbsp;&nbsp;(&nbsp;Admin&nbsp;)&nbsp;&nbsp;
+                </a>
+                <hr>
+                <a mat-menu-item>
+                    <mat-icon class="mat-icon material-icons">business_center</mat-icon>&nbsp;&nbsp;View Profile&nbsp;&nbsp;
+                </a>
+                <a mat-menu-item>
+                    <mat-icon class="mat-icon material-icons">exit_to_app</mat-icon>&nbsp;&nbsp;Sign Out&nbsp;&nbsp;
+                </a>
+            </mat-menu>
+            <div class="space"></div>
+
+            <a mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon class="mat-icon material-icons">more_vert</mat-icon>
+            </a>
+            <mat-menu #menu="matMenu">
+                <a mat-menu-item>
+                    <mat-icon class="mat-icon material-icons">settings</mat-icon>&nbsp;&nbsp;Settings&nbsp;&nbsp;
+                </a>
+                <a mat-menu-item>
+                    <mat-icon class="mat-icon material-icons">notifications</mat-icon>&nbsp;&nbsp;Notifications_off&nbsp;&nbsp;
+                </a>
+
+                <a mat-menu-item>
+                    <mat-icon class="mat-icon material-icons">share</mat-icon>&nbsp;&nbsp;Share&nbsp;&nbsp;
+                </a>
+                <hr>
+
+                <a mat-menu-item routerLink="/help">
+                    <mat-icon class="mat-icon material-icons">help</mat-icon>&nbsp;&nbsp;Help&nbsp;&nbsp;
+                </a>
+            </mat-menu>
+        </mat-toolbar>
+
+        <!-- content -->
+        <div class="main-content-box">
+            <div *ngIf='true'>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

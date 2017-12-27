@@ -1,0 +1,34 @@
+div.saber-card { 
+    text-align: center;
+    content: auto;
+    padding: 16px 40px 60px 20px;
+    
+}
+
+.card-container{
+    display: grid;
+    /*grid-template-columns : 100px 100px 100px;*/
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 380px 380px;
+}
+
+
+.card-container > div > img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+    background: #eee;
+    padding: 10px;
+}
+
+.card-container > div > img:hover
+{
+   border: 1px solid #858585;
+   background: #ddd;
+   padding: 10px;
+}
+
+
+h3.title{
+    color: #858585;
+}

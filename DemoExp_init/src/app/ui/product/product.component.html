@@ -1,0 +1,10 @@
+<h1>
+  <div class="saber-card">Product List</div>
+</h1>
+
+<div class="card-container mat-elevation-z8">
+  <div class="saber-card" *ngFor="let prod of products">
+    <img src="assets/img/products/{{prod?.img}}" [alt]="prod?.name">
+    <h3 class="title">{{prod?.name | uppercase}}</h3>
+  </div>
+</div>

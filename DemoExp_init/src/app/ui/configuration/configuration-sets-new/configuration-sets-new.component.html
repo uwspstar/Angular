@@ -1,0 +1,34 @@
+<mat-horizontal-stepper [linear]="true">
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Fill out New Configuration Set Name</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Configuration set name" formControlName="firstCtrl" required>
+      </mat-form-field>
+      <p>
+        <button mat-raised-button matStepperNext class="clear">NEXT
+        </button>
+      </p>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]=" secondFormGroup ">
+    <form [formGroup]="secondFormGroup ">
+      <ng-template matStepLabel>Select configuration file(s)</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Address " formControlName="secondCtrl " required>
+      </mat-form-field>
+      <p>
+        <button mat-raised-button matStepperNext class="clear">NEXT</button>
+        <button mat-raised-button matStepperPrevious class="clear">BACK</button>
+      </p>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done Review and Submit</ng-template>
+    You are now done.
+    <p>
+      <button mat-raised-button matStepperPrevious class="clear">BACK</button>
+      <button mat-raised-button matStepperPrevious class="clear">Submit</button>
+    </p>
+  </mat-step>
+</mat-horizontal-stepper>

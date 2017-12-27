@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "konami",
+        "img": "konami.jpg"
+    },
+    {
+        "id": 2,
+        "name": "pop slots",
+        "img": "pop.jpg"
+    },
+    {
+        "id": 3,
+        "name": "myvegas slots",
+        "img": "slots.jpg"
+    },
+    {
+        "id": 4,
+        "name": "blackjack",
+        "img": "blackjack.jpg"
+    },
+    {
+        "id": 5,
+        "name": "myvegas",
+        "img": "myvegas.jpg"
+    }
+]

@@ -1,0 +1,85 @@
+<h1>
+  Configuration Set List
+</h1>
+<p class="flex-box">
+  <span class="fill-remaining-space"></span>
+  <button mat-raised-button color='primary' class="add-new" (click)="onNewSetOpenDialog()">
+    <mat-icon>add</mat-icon> New Config Set
+  </button>
+</p>
+
+
+<div class="example-header">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
+</div>
+
+<div class="example-container mat-elevation-z8">
+
+  <mat-table [dataSource]="dataSource" matSort>
+
+    <!--['name', 'status', 'breakingChang','lastUpdatedBy', 'lastUpdateDate', 'publish', 'action']-->
+    <!-- ID Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+    </ng-container>
+
+    <!-- Progress Column -->
+    <ng-container matColumnDef="status">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Status </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.status}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="breakingChang">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Breaking
+        <br> Change </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.breakingChang}} </mat-cell>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="lastUpdatedBy">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Updated By </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.lastUpdatedBy}} </mat-cell>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="lastUpdateDate">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Update Date </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.lastUpdateDate}} </mat-cell>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="publish">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Publish </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.publish}} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="action">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>
+      <mat-cell *matCellDef="let row" class="detail">
+
+        <button mat-icon-button title="detail " (click)="onDetailOpenDialog()">
+          <mat-icon class="mat-icon material-icons">content_paste</mat-icon>
+        </button>
+
+        <button mat-icon-button title="downlaod">
+          <mat-icon class="mat-icon material-icons">file_download</mat-icon>
+        </button>
+
+        <button mat-icon-button color="accent" title="push" *ngIf="row.id < 3">
+          <mat-icon class="mat-icon material-icons">cloud_upload</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;">
+    </mat-row>
+  </mat-table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>

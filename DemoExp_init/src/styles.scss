@@ -1,0 +1,95 @@
+ 
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('//fonts.googleapis.com/icon?family=Material+Icons');
+
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+}
+
+  .side-menu{
+    min-width: 280px;
+    color: #D0D3D4;
+    /*  
+    color: #FF5318;
+    background-color: #282828 !important;*/
+    background-color: #D0D3D4 !important;
+  }
+  .side-header-box{ 
+    padding: 10px 0 0 0;
+    background-color: #7B7D7D !important;   
+     
+  }
+  .clear{ 
+    float: right;
+    color: #ccc; 
+  }
+  .app-color{
+    color: red;
+  }
+  .app-color-white{
+    color: #fff;
+  }
+  .app-name{
+    font-size: 2rem;
+    margin:8px;
+  }
+  .side-break{
+    /*background-color:#000 !important;*/
+    height: 2px;
+  }
+  .flex-box{
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 16px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+  }
+  .fill-remaining-space {
+    // This fills the remaining space, by using flexbox. 
+    // Every toolbar row uses a flexbox row layout.
+    flex: 1 1 auto;
+  }
+
+  img.avart{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  img.side-menu-img{ 
+    width: 38px;
+    margin-left: 3rem;
+  }
+  img.side-menu-img2 {
+    height:46px;
+    margin-left: 1.2rem;
+  }
+  div.space{
+    width:12px;
+    height: 1px;
+    margin: 6px;
+  }
+  div.main-content-box{
+    margin:auto;
+    padding: 4rem;
+  }
+   
+  h1{
+    color :#858585;
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+  }
+  .mat-header-cell {
+    font-size: 1rem !important;
+    color :#575758;
+  }
+
+  .side-bottom {
+    position:absolute;
+    bottom:0; 
+    width: 100%;
+    display: block;
+  }
+ 
+  .mat-row:nth-child(even) {background: #D0D3D4}
+  .mat-row:nth-child(odd) {background: #FFF}
