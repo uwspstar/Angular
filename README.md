@@ -220,9 +220,41 @@ export class MaterialsModule { }
 </tr>
 
 ```
+## Mat-table DataSource, Paginator , Sort
+```
+  // component page 
+  dataSource: MatTableDataSource<ConfigSet>;
 
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+  ...
+  
+  ngOnInit(): void {
+    this.configSet.getConfigSetList()
+      .subscribe(data => {
+        this.dataSource = new MatTableDataSource(data);
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
+      });
+  }
+  
+  // service page
+  ...
+  import { Observable } from 'rxjs/Observable';
+  import { HttpClient } from '@angular/common/http';
+
+  ...
+  constructor(private http: HttpClient) { }
+
+  getConfigSetList(): Observable<ConfigSet[]> {
+    return this.http.get<ConfigSet[]>(URL_CONFIGSETS);
+  }
+```
 ## Rxjs import
 ```
+
+// HttpClient default return json, DO NOT need map(res=>res.json())
+
 import { Rx } from 'rxjs/Rx';
 
 //Observable, Observer, BehaviorSubject, Subject, ReplaySubject
@@ -238,7 +270,7 @@ Observable.from()
 Observable.of()
 
 import { map } from 'rxjs/add/operator/map';
-/* rxjs/operators
+/*
 audit, buffer, catch, combineAll, combineLatest, concat, count, debounce, delay, 
 distinct, do, every, expand, filter, finally, find , first, groupBy,
 ignoreElements, isEmpty, last, let, map, max, merge, mergeMap, min, pluck, 
