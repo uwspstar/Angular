@@ -237,7 +237,7 @@ import { concat,empty } from 'rxjs/observable';
 Observable.from()
 Observable.of()
 
-import { map, filter } from 'rxjs/operators';
+import { map } from 'rxjs/add/operator/map';
 /* rxjs/operators
 audit, buffer, catch, combineAll, combineLatest, concat, count, debounce, delay, 
 distinct, do, every, expand, filter, finally, find , first, groupBy,
