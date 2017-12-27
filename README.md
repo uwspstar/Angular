@@ -19,7 +19,7 @@
 
 $ ng new demoMT --style=scss --routing
 
-//Build Optimizer v5
+//Build Optimizer v5 $ ng build --prod
 $ ng build --prod --aot=true --build-optimizer.
 
 
@@ -206,11 +206,55 @@ export class MaterialsModule { }
 - TypeScript Hero
 - vscode-icons
 
-
+//https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2
+- Angular v5 Snippets
 ```
 
+## Directive
+
+```javascript
+
+<tr *ngFor="let hero of heroes; let i = index">
+    <td>{{hero.name}}</td>
+    <td>{{i}}</td>
+</tr>
+
+```
+## Mat-table DataSource, Paginator , Sort
+```
+  // component page 
+  dataSource: MatTableDataSource<ConfigSet>;
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+  ...
+  
+  ngOnInit(): void {
+    this.configSet.getConfigSetList()
+      .subscribe(data => {
+        this.dataSource = new MatTableDataSource(data);
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
+      });
+  }
+  
+  // service page
+  ...
+  import { Observable } from 'rxjs/Observable';
+  import { HttpClient } from '@angular/common/http';
+
+  ...
+  constructor(private http: HttpClient) { }
+
+  getConfigSetList(): Observable<ConfigSet[]> {
+    return this.http.get<ConfigSet[]>(URL_CONFIGSETS);
+  }
+```
 ## Rxjs import
 ```
+
+// HttpClient default return json, DO NOT need map(res=>res.json())
+
 import { Rx } from 'rxjs/Rx';
 
 //Observable, Observer, BehaviorSubject, Subject, ReplaySubject
@@ -225,8 +269,8 @@ import { concat,empty } from 'rxjs/observable';
 Observable.from()
 Observable.of()
 
-import { map, filter } from 'rxjs/operators';
-/* rxjs/operators
+import { map } from 'rxjs/add/operator/map';
+/*
 audit, buffer, catch, combineAll, combineLatest, concat, count, debounce, delay, 
 distinct, do, every, expand, filter, finally, find , first, groupBy,
 ignoreElements, isEmpty, last, let, map, max, merge, mergeMap, min, pluck, 
@@ -267,6 +311,7 @@ import { FormsModule } from '@angular/forms';
 
 ### YouTube 
 - [Angular Firebase](https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA/featured)
+- [Angular University](https://www.youtube.com/channel/UC3cEGKhg3OERn-ihVsJcb7A)
 
 ### Udemy
 - [The Complete Angular Course: Beginner to Advanced](https://www.udemy.com/the-complete-angular-master-class/learn/v4/overview)
