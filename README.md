@@ -315,3 +315,24 @@ import { FormsModule } from '@angular/forms';
 
 ### Udemy
 - [The Complete Angular Course: Beginner to Advanced](https://www.udemy.com/the-complete-angular-master-class/learn/v4/overview)
+
+### Exception
+- `Expression has changed after it was checked`
+
+```
+ // use ChangeDetectorRef on ngAfterViewChecked
+ import { Component, OnInit, ViewChild, AfterViewChecked, ChangeDetectorRef } from '@angular/core';
+ ...
+ setName: string = "";
+ selectFiles = [];
+ newConfigSet;
+ ...
+ 
+ constructor(private cdRef: ChangeDetectorRef) { }
+
+ ngAfterViewChecked() {
+
+    this.newConfigSet = [{ "setName": this.setName }, { "selectFiles": this.selectFiles }];
+    this.cdRef.detectChanges();
+  }
+```
