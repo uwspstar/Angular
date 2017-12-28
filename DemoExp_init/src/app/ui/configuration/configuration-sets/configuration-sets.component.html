@@ -8,7 +8,6 @@
   </button>
 </p>
 
-
 <div class="example-header">
   <mat-form-field>
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
@@ -19,44 +18,36 @@
 
   <mat-table [dataSource]="dataSource" matSort>
 
-    <!--['name', 'status', 'breakingChang','lastUpdatedBy', 'lastUpdateDate', 'publish', 'action']-->
-    <!-- ID Column -->
     <ng-container matColumnDef="name">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
     </ng-container>
 
-    <!-- Progress Column -->
     <ng-container matColumnDef="status">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Status </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.status}} </mat-cell>
     </ng-container>
 
-    <!-- Name Column -->
     <ng-container matColumnDef="breakingChang">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Breaking
         <br> Change </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.breakingChang}} </mat-cell>
     </ng-container>
 
-    <!-- Color Column -->
     <ng-container matColumnDef="lastUpdatedBy">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Updated By </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.lastUpdatedBy}} </mat-cell>
     </ng-container>
 
-    <!-- Color Column -->
     <ng-container matColumnDef="lastUpdateDate">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Update Date </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.lastUpdateDate}} </mat-cell>
     </ng-container>
 
-    <!-- Color Column -->
     <ng-container matColumnDef="publish">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Publish </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.publish}} </mat-cell>
     </ng-container>
-
 
     <ng-container matColumnDef="action">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>

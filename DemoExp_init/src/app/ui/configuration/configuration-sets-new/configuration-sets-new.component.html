@@ -3,32 +3,88 @@
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Fill out New Configuration Set Name</ng-template>
       <mat-form-field>
-        <input matInput placeholder="Configuration set name" formControlName="firstCtrl" required>
+        <input [(ngModel)]="setName" matInput placeholder="Configuration set name" formControlName="firstCtrl" required>
       </mat-form-field>
       <p>
-        <button mat-raised-button matStepperNext class="clear">NEXT
+        <button mat-button matStepperNext class="atRt">
+          Next
+          <i class="material-icons">navigate_next</i>
         </button>
       </p>
     </form>
   </mat-step>
-  <mat-step [stepControl]=" secondFormGroup ">
+
+  <mat-step [stepControl]="secondFormGroup">
+    <ng-template matStepLabel>Select configuration file(s)</ng-template>
     <form [formGroup]="secondFormGroup ">
-      <ng-template matStepLabel>Select configuration file(s)</ng-template>
-      <mat-form-field>
-        <input matInput placeholder="Address " formControlName="secondCtrl " required>
-      </mat-form-field>
+      <div class="filelist">
+        <div class="example-header">
+          <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+          </mat-form-field>
+        </div>
+
+        <div class="example-container mat-elevation-z8">
+
+          <mat-table [dataSource]="dataSource" matSort>
+
+            <ng-container matColumnDef="id">
+              <mat-header-cell *matHeaderCellDef mat-sort-header></mat-header-cell>
+              <mat-cell *matCellDef="let row" class="saber-cell">
+                <mat-checkbox (change)="onSelectFile(row.id,row.name,$event)"></mat-checkbox>
+              </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+              <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;">
+            </mat-row>
+          </mat-table>
+
+          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+        </div>
+      </div>
+
       <p>
-        <button mat-raised-button matStepperNext class="clear">NEXT</button>
-        <button mat-raised-button matStepperPrevious class="clear">BACK</button>
+        <button mat-button matStepperPrevious class="atLt">
+          <i class="material-icons">navigate_before</i>
+          Back
+        </button>
+
+        <button mat-button matStepperNext class="atRt">Next
+          <i class="material-icons">navigate_next</i>
+        </button>
+
       </p>
     </form>
   </mat-step>
+
   <mat-step>
-    <ng-template matStepLabel>Done Review and Submit</ng-template>
-    You are now done.
+    <ng-template matStepLabel>Review and Submit</ng-template>
+    There are
+    <button mat-mini-fab color="accent">{{selectFiles.length}}</button>
+    file(s) selected , Please reveiew and submit.
+
+    <h4>Config Set Name : {{setName}}</h4>
+
+    <div *ngFor="let item of selectFiles; let i = index">
+      <p class="file-name">
+        <i class="material-icons selected-file">done</i>
+        {{item.name}}
+      </p>
+      <hr>
+    </div>
+
     <p>
-      <button mat-raised-button matStepperPrevious class="clear">BACK</button>
-      <button mat-raised-button matStepperPrevious class="clear">Submit</button>
+      <button mat-button matStepperPrevious class="atLt">
+        <i class="material-icons">navigate_before</i>
+        Back</button>
+      <button mat-raised-button class="atRt" color="accent">Submit</button>
     </p>
+
   </mat-step>
 </mat-horizontal-stepper>
