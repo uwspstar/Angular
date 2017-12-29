@@ -258,7 +258,11 @@ export class MaterialsModule { }
 import { Rx } from 'rxjs/Rx';
 
 //Observable, Observer, BehaviorSubject, Subject, ReplaySubject
-import {Observable} from 'rxjs/Observable';
+import { Observable } from 'rxjs/Observable';
+
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/map';
+
 import {Observer} from 'rxjs/Observer';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import {Subject} from 'rxjs/Subject';
@@ -270,6 +274,7 @@ Observable.from()
 Observable.of()
 
 import { map } from 'rxjs/add/operator/map';
+import { map } from 'rxjs/add/operator/switchMap';
 /*
 audit, buffer, catch, combineAll, combineLatest, concat, count, debounce, delay, 
 distinct, do, every, expand, filter, finally, find , first, groupBy,
@@ -285,6 +290,20 @@ takeUntil, throttle, timeout, toArray, toPromise, withLatestFrom, zip
 -  Frontend security is great for the user experience, but does not provide real security. Backend database rules is the only way to truly protect your data.
 
 ```
+## Data Binding
+
+- @output // from ts ->html
+- @input  // html -> ts
+
+```
+  @Input() count = 0;
+  @Output() countChange = EventEmitter<number>();
+
+  increment() {
+    this.count++;
+    this.countChange.emit(this.count);
+  }
+```  
 
 ## FormsModule is Required for Two-Way-Binding! : 
 
