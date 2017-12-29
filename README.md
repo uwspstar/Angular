@@ -258,7 +258,11 @@ export class MaterialsModule { }
 import { Rx } from 'rxjs/Rx';
 
 //Observable, Observer, BehaviorSubject, Subject, ReplaySubject
-import {Observable} from 'rxjs/Observable';
+import { Observable } from 'rxjs/Observable';
+
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/map';
+
 import {Observer} from 'rxjs/Observer';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import {Subject} from 'rxjs/Subject';
@@ -270,6 +274,7 @@ Observable.from()
 Observable.of()
 
 import { map } from 'rxjs/add/operator/map';
+import { map } from 'rxjs/add/operator/switchMap';
 /*
 audit, buffer, catch, combineAll, combineLatest, concat, count, debounce, delay, 
 distinct, do, every, expand, filter, finally, find , first, groupBy,
@@ -285,6 +290,38 @@ takeUntil, throttle, timeout, toArray, toPromise, withLatestFrom, zip
 -  Frontend security is great for the user experience, but does not provide real security. Backend database rules is the only way to truly protect your data.
 
 ```
+## Data Binding
+
+- @output // from ts ->html
+- @input  // html -> ts
+
+```
+  @Input() count = 0;
+  @Output() countChange = EventEmitter<number>();
+
+  onIncrement() {
+    this.count++;
+    this.countChange.emit(this.count);
+  }
+  
+  ...
+  <p>
+    Count: {{ count }}
+    <button (click)="onIncrement()">Increment</button>
+  </p>
+```  
+
+- porperty binding
+```
+<div $ngFor="let item of items; let i = index">
+ <app-card [inputItem]="item"></app-card>
+</div>
+
+... app-card ts
+
+ @Input('inputItem') inputItem :any;
+ 
+```
 
 ## FormsModule is Required for Two-Way-Binding! : 
 
@@ -298,6 +335,9 @@ import { FormsModule } from '@angular/forms';
 
 ```
 # Others Resource
+
+### Themes
+- materialpalette [https://www.materialpalette.com](https://www.materialpalette.com)
 
 ### Backend Service
 - json-server [https://github.com/typicode/json-server](https://github.com/typicode/json-server)
@@ -315,3 +355,24 @@ import { FormsModule } from '@angular/forms';
 
 ### Udemy
 - [The Complete Angular Course: Beginner to Advanced](https://www.udemy.com/the-complete-angular-master-class/learn/v4/overview)
+
+### Exception
+- `Expression has changed after it was checked`
+
+```
+ // use ChangeDetectorRef on ngAfterViewChecked
+ import { Component, OnInit, ViewChild, AfterViewChecked, ChangeDetectorRef } from '@angular/core';
+ ...
+ setName: string = "";
+ selectFiles = [];
+ newConfigSet;
+ ...
+ 
+ constructor(private cdRef: ChangeDetectorRef) { }
+
+ ngAfterViewChecked() {
+
+    this.newConfigSet = [{ "setName": this.setName }, { "selectFiles": this.selectFiles }];
+    this.cdRef.detectChanges();
+  }
+```
