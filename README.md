@@ -259,7 +259,7 @@ import { Rx } from 'rxjs/Rx';
 
 //Observable, Observer, BehaviorSubject, Subject, ReplaySubject
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable'
+import 'rxjs/add/observable/throw'
 - Observable.throw
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
