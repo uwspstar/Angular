@@ -259,7 +259,8 @@ import { Rx } from 'rxjs/Rx';
 
 //Observable, Observer, BehaviorSubject, Subject, ReplaySubject
 import { Observable } from 'rxjs/Observable';
-
+import 'rxjs/add/observable'
+- Observable.throw
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
 
@@ -274,7 +275,11 @@ Observable.from()
 Observable.of()
 
 import { map } from 'rxjs/add/operator/map';
-import { map } from 'rxjs/add/operator/switchMap';
+import { switchMap } from 'rxjs/add/operator/switchMap';
+import { catch } from 'rxjs/add/operator/catch';
+
+
+
 /*
 audit, buffer, catch, combineAll, combineLatest, concat, count, debounce, delay, 
 distinct, do, every, expand, filter, finally, find , first, groupBy,
