@@ -324,6 +324,9 @@ import { FormsModule } from '@angular/forms';
 ```
 # Others Resource
 
+### Themes
+- materialpalette [https://www.materialpalette.com](https://www.materialpalette.com)
+
 ### Backend Service
 - json-server [https://github.com/typicode/json-server](https://github.com/typicode/json-server)
 
