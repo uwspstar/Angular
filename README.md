@@ -311,6 +311,18 @@ takeUntil, throttle, timeout, toArray, toPromise, withLatestFrom, zip
   </p>
 ```  
 
+- porperty binding
+```
+<div $ngFor="let item of items; let i = index">
+ <app-card [inputItem]="item"></app-card>
+</div>
+
+... app-card ts
+
+ @Input('inputItem') inputItem :any;
+ 
+```
+
 ## FormsModule is Required for Two-Way-Binding! : 
 
 ```javascript
