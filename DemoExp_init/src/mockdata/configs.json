@@ -2,31 +2,43 @@
     {
         "id": 1,
         "name": " Purchase Bonus Wheel",
-        "status": "YES"
+        "status": "YES",
+        "schema": 1,
+        "datainstance": 1
     },
     {
         "id": 2,
         "name": "Daily Bonus Wheel",
-        "status": "NO"
+        "status": "NO",
+        "schema": 1,
+        "datainstance": 1
     },
     {
         "id": 3,
         "name": "3 - Purchase Bonus Wheel",
-        "status": "YES"
+        "status": "YES",
+        "schema": 1,
+        "datainstance": 1
     },
     {
         "id": 4,
         "name": "4 - Daily Bonus Wheel",
-        "status": "NO"
+        "status": "NO",
+        "schema": 1,
+        "datainstance": 1
     },
     {
         "id": 5,
         "name": "5 - Purchase Bonus Wheel",
-        "status": "YES"
+        "status": "YES",
+        "schema": 1,
+        "datainstance": 1
     },
     {
         "id": 6,
         "name": "6 - Daily Bonus Wheel",
-        "status": "NO"
+        "status": "NO",
+        "schema": 1,
+        "datainstance": 1
     }
 ]

@@ -83,7 +83,7 @@
       <button mat-button matStepperPrevious class="atLt">
         <i class="material-icons">navigate_before</i>
         Back</button>
-      <button mat-raised-button class="atRt" color="accent">Submit</button>
+      <button mat-raised-button class="atRt" color="accent" mat-dialog-close="{{newConfigSet | json}}">Submit</button>
     </p>
 
   </mat-step>

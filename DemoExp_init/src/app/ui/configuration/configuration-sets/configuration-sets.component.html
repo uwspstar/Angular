@@ -30,17 +30,19 @@
 
     <ng-container matColumnDef="breakingChang">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Breaking
-        <br> Change </mat-header-cell>
+        <br>Change </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.breakingChang}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="lastUpdatedBy">
-      <mat-header-cell *matHeaderCellDef mat-sort-header> Updated By </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Updated
+        <br>By </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.lastUpdatedBy}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="lastUpdateDate">
-      <mat-header-cell *matHeaderCellDef mat-sort-header> Update Date </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Update
+        <br>Date </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.lastUpdateDate}} </mat-cell>
     </ng-container>
 

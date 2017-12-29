@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfigurationSetsDetailComponent implements OnInit {
 
+  selectSet = [
+    {
+      "id": 1,
+      "name": " Purchase Bonus Wheel",
+      "status": "YES"
+    },
+    {
+      "id": 2,
+      "name": "Daily Bonus Wheel",
+      "status": "NO"
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

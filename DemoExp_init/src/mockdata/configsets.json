@@ -1,56 +1,134 @@
 [
     {
         "id": 1,
-        "name": "Hydrogen",
+        "name": "1Hydrogen",
         "status": "QA",
         "breakingChang": false,
         "lastUpdatedBy": "Bob",
         "lastUpdateDate": "2017-10-3 10:38:10",
-        "publish": "2017-10-6 10:38:10"
+        "publish": "2017-10-6 10:38:10",
+        "version": 1,
+        "revision": 1
     },
     {
         "id": 2,
-        "name": "Helium",
+        "name": "2Hydrogen",
         "status": "HOTFIX",
         "breakingChang": false,
         "lastUpdatedBy": "Tom",
         "lastUpdateDate": "2017-11-3 10: 38: 10",
-        "publish": "2017-11-6 10: 38: 10"
+        "publish": "2017-11-6 10: 38: 10",
+        "version": 1,
+        "revision": 2
     },
     {
         "id": 3,
-        "name": "Lithium",
+        "name": "3Lithium",
         "status": "PROD",
         "breakingChang": false,
         "lastUpdatedBy": "John",
         "lastUpdateDate": "2017-12-3 10: 38: 10",
-        "publish": "2017-12-6 10: 38: 10"
+        "publish": "2017-12-6 10: 38: 10",
+        "version": 1,
+        "revision": 2
     },
     {
         "id": 4,
-        "name": "Beryllium",
+        "name": "4Beryllium",
         "status": "PROD",
         "breakingChang": false,
         "lastUpdatedBy": "Garry",
         "lastUpdateDate": "2017-09-3 10:38:10",
-        "publish": "2017-10-6 10:38:10"
+        "publish": "2017-10-6 10:38:10",
+        "version": 1,
+        "revision": 2
     },
     {
         "id": 5,
-        "name": "Boron",
+        "name": "5Boron",
         "status": "PROD",
         "breakingChang": false,
         "lastUpdatedBy": "Mike",
         "lastUpdateDate": "2017-08-3 10:38:10",
-        "publish": "2017-10-16 10:38:10"
+        "publish": "2017-10-16 10:38:10",
+        "version": 1,
+        "revision": 2
     },
     {
         "id": 6,
-        "name": "Carbon",
+        "name": "6Carbon",
         "status": "QA",
         "breakingChang": false,
         "lastUpdatedBy": "Andrew",
         "lastUpdateDate": "2017-07-3 10:38:10",
-        "publish": "2017-10-16 10:38:10"
+        "publish": "2017-10-16 10:38:10",
+        "version": 1,
+        "revision": 2
+    },
+    {
+        "id": 7,
+        "name": "7Hydrogen",
+        "status": "QA",
+        "breakingChang": false,
+        "lastUpdatedBy": "Bob",
+        "lastUpdateDate": "2017-10-3 10:38:10",
+        "publish": "2017-10-6 10:38:10",
+        "version": 1,
+        "revision": 1
+    },
+    {
+        "id": 8,
+        "name": "8Hydrogen",
+        "status": "HOTFIX",
+        "breakingChang": false,
+        "lastUpdatedBy": "Tom",
+        "lastUpdateDate": "2017-11-3 10: 38: 10",
+        "publish": "2017-11-6 10: 38: 10",
+        "version": 1,
+        "revision": 2
+    },
+    {
+        "id": 9,
+        "name": "9Lithium",
+        "status": "PROD",
+        "breakingChang": false,
+        "lastUpdatedBy": "John",
+        "lastUpdateDate": "2017-12-3 10: 38: 10",
+        "publish": "2017-12-6 10: 38: 10",
+        "version": 1,
+        "revision": 2
+    },
+    {
+        "id": 10,
+        "name": "10Beryllium",
+        "status": "PROD",
+        "breakingChang": false,
+        "lastUpdatedBy": "Garry",
+        "lastUpdateDate": "2017-09-3 10:38:10",
+        "publish": "2017-10-6 10:38:10",
+        "version": 1,
+        "revision": 2
+    },
+    {
+        "id": 11,
+        "name": "11Boron",
+        "status": "PROD",
+        "breakingChang": false,
+        "lastUpdatedBy": "Mike",
+        "lastUpdateDate": "2017-08-3 10:38:10",
+        "publish": "2017-10-16 10:38:10",
+        "version": 1,
+        "revision": 2
+    },
+    {
+        "id": 12,
+        "name": "12Carbon",
+        "status": "QA",
+        "breakingChang": false,
+        "lastUpdatedBy": "Andrew",
+        "lastUpdateDate": "2017-07-3 10:38:10",
+        "publish": "2017-10-16 10:38:10",
+        "version": 1,
+        "revision": 2
     }
 ]

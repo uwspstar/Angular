@@ -1,19 +1,15 @@
-
-import { ConfigService } from './../../../shared/service/data/config.service';
+import { ConfigService } from './../../shared/service/data/config.service';
+import { Config } from './../../shared/interface/config';
 import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
-import { Config } from './../../../shared/interface/config';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit, ViewChild, AfterViewChecked, ChangeDetectorRef } from '@angular/core';
 
 @Component({
-  selector: 'app-configuration-sets-new',
-  templateUrl: './configuration-sets-new.component.html',
-  styleUrls: ['./configuration-sets-new.component.scss']
+  selector: 'app-publish',
+  templateUrl: './publish.component.html',
+  styleUrls: ['./publish.component.scss']
 })
-export class ConfigurationSetsNewComponent implements OnInit, AfterViewChecked {
-
-  firstFormGroup: FormGroup;
-  secondFormGroup: FormGroup;
+export class PublishComponent implements OnInit, AfterViewChecked {
 
   setName: string = "";
   selectFiles = [];
@@ -24,6 +20,18 @@ export class ConfigurationSetsNewComponent implements OnInit, AfterViewChecked {
   };
 
   isChecked: boolean = false;
+  selectSet: string;
+  selectEnviroment: string;
+
+  enviroments = [
+    'DEV-1',
+    'DEV-2',
+    'QA - 1',
+    'QA - 2',
+    'HOTFIX',
+    'PROD',
+    'STAGING'
+  ];
 
   displayedColumns = ['id', 'name'];
   dataSource: MatTableDataSource<Config>;
@@ -36,18 +44,8 @@ export class ConfigurationSetsNewComponent implements OnInit, AfterViewChecked {
 
   ngOnInit() {
 
-    this.firstFormGroup = this.fb.group({
-      firstCtrl: ['', Validators.required]
-    });
-
-    this.secondFormGroup = this.fb.group({
-      secondCtrl: [this.selectFiles.length, Validators.required]
-    });
-
-
-    this.config.getConfigList()
+    this.config.getConfigSetList()
       .subscribe(data => {
-        data = data.filter(d => d.status == "YES");// Only display active config files
         this.dataSource = new MatTableDataSource(data);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
@@ -64,7 +62,6 @@ export class ConfigurationSetsNewComponent implements OnInit, AfterViewChecked {
   }
 
   applyFilter(filterValue: string) {
-
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 

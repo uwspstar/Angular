@@ -1,3 +1,4 @@
+import { PublishComponent } from './ui/publish/publish.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './ui/home/home.component';
@@ -17,7 +18,9 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'help', component: HelpComponent },
   { path: 'schedule', component: ScheduleComponent },
-  { path: 'configfile', component: ConfigFileComponent }
+  { path: 'configfile', component: ConfigFileComponent },
+  { path: 'event', component: ConfigFileComponent },
+  { path: 'publish', component: PublishComponent }
 
 ];
 

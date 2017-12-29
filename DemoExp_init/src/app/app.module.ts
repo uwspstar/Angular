@@ -21,6 +21,7 @@ import { ProductService } from './shared/service/product/product.service';
 import { DashboardComponent } from './ui/dashboard/dashboard.component';
 import { ConfigurationSetsDetailComponent } from './ui/configuration/configuration-sets-detail/configuration-sets-detail.component';
 import { ConfigurationSetsNewComponent } from './ui/configuration/configuration-sets-new/configuration-sets-new.component';
+import { PublishComponent } from './ui/publish/publish.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ConfigurationSetsNewComponent } from './ui/configuration/configuration-
     DashboardComponent,
     ConfigurationSetsDetailComponent,
     ConfigurationSetsNewComponent,
+    PublishComponent,
   ],
   imports: [
     BrowserModule,

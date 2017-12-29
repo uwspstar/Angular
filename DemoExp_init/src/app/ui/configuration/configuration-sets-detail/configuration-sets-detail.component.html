@@ -1,13 +1,21 @@
-<p class="clear">
-  <button mat-icon-button>
-    <mat-icon class="mat-icon material-icons">clear</mat-icon>
-  </button>
+<h4>
+  Config Set Name : {{123}}</h4>
+
+<p>
+  There are
+  <button mat-mini-fab color="accent">{{selectSet.length}}</button>
+  file(s) in the Sets.
 </p>
 
-<h1>
-  Configuration Set List
-</h1>
+<div *ngFor="let item of selectSet; let i = index">
+  <p class="file-name">
+    <i class="material-icons selected-file">done</i>
+    {{item.name}}
+  </p>
+  <hr>
+</div>
+
 <p class="flex-box">
   <span class="fill-remaining-space"></span>
-  <button mat-raised-button color="primary" class="add-new" mat-dialog-close="12345">CLOSE</button>
+  <button mat-raised-button color="primary" class="add-new" mat-dialog-close>CLOSE</button>
 </p>
