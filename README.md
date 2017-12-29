@@ -299,10 +299,16 @@ takeUntil, throttle, timeout, toArray, toPromise, withLatestFrom, zip
   @Input() count = 0;
   @Output() countChange = EventEmitter<number>();
 
-  increment() {
+  onIncrement() {
     this.count++;
     this.countChange.emit(this.count);
   }
+  
+  ...
+  <p>
+    Count: {{ count }}
+    <button (click)="onIncrement()">Increment</button>
+  </p>
 ```  
 
 ## FormsModule is Required for Two-Way-Binding! : 
