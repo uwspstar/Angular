@@ -209,6 +209,54 @@ export class MaterialsModule { }
 //https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2
 - Angular v5 Snippets
 ```
+## Generic
+- data.service.ts
+```
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+
+@Injectable()
+export class DataService<T> {
+
+  constructor(private url, private http: HttpClient) { }
+
+  getAll(): Observable<T[]> {
+    return this.http.get<T[]>(this.url);
+  }
+}
+```
+- product.service.ts
+```
+import { DataService } from './../data.service';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Product } from '../../../interface/product';
+
+
+const URL = "mockdata/products.json";
+
+@Injectable()
+export class ProductService extends DataService<Product> {
+
+  constructor(http: HttpClient) {
+    super(URL, http);
+  }
+}
+```
+- product.component.ts
+```
+products: Product[];
+
+  constructor(private productService: ProductService) { }
+
+  ngOnInit() {
+
+    this.productService.getAll()
+      .subscribe(data => this.products = data);
+  }
+``
+
 
 ## Directive
 
@@ -361,6 +409,23 @@ import { FormsModule } from '@angular/forms';
 ### Udemy
 - [The Complete Angular Course: Beginner to Advanced](https://www.udemy.com/the-complete-angular-master-class/learn/v4/overview)
 
+### Error handler
+
+```
+import { ErrorHandler } from '@angular/core'
+
+export class AppErrorHandler implements ErrorHandler {
+    handleError(error: any): void {
+
+        //TO DO log error to server 
+        console.log(error);
+    }
+}
+
+...
+//app.module.ts
+
+```
 ### Exception
 - `Expression has changed after it was checked`
 
