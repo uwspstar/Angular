@@ -389,6 +389,9 @@ import { FormsModule } from '@angular/forms';
 ```
 # Others Resource
 
+### Document
+[https://compodoc.github.io/website/](https://compodoc.github.io/website/)
+
 ### Themes
 - materialpalette [https://www.materialpalette.com](https://www.materialpalette.com)
 
