@@ -337,7 +337,40 @@ takeUntil, throttle, timeout, toArray, toPromise, withLatestFrom, zip
  */
 
 ```
+## Pass value to  Open Dialog
 
+- ConfigurationSetsDetailComponent is the dialog windown
+```
+import { MatDialog } from '@angular/material';
+constructor(private configSet: ConfigSetService, private dialog: MatDialog) { }
+
+onDetailOpenDialog(id, name) {
+    this.dialog.open(ConfigurationSetsDetailComponent, {
+      data: {
+        configSetId: id,
+        configSetName: name
+      }
+    }).afterClosed()
+      .subscribe(
+      result => console.log(result),
+      err => console.log('err : ConfigurationSetsComponent > onOpenDialog'),
+      () => console.log('Complet'));
+  }
+```
+-  ConfigurationSetsDetailComponent.ts
+```
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+... 
+
+constructor(private config: ConfigFileService,
+    public dialogRef: MatDialogRef<ConfigurationSetsDetailComponent>,
+    @Inject(MAT_DIALOG_DATA) public input: any) {
+    // console.log(data);
+  }
+```
+
+```
 ## Security
 ```
 -  Frontend security is great for the user experience, but does not provide real security. Backend database rules is the only way to truly protect your data.
