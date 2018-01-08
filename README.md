@@ -337,6 +337,16 @@ takeUntil, throttle, timeout, toArray, toPromise, withLatestFrom, zip
  */
 
 ```
+
+## material stepper back to step 0
+```
+<mat-horizontal-stepper [linear]="true" #stepper>
+...
+  @ViewChild('stepper') stepper;
+...
+this.stepper.selectedIndex = 0;
+
+```
 ## Pass value to  Open Dialog
 
 - ConfigurationSetsDetailComponent is the dialog windown
