@@ -489,3 +489,14 @@ export class AppErrorHandler implements ErrorHandler {
     this.cdRef.detectChanges();
   }
 ```
+
+- Angular 2 Expression Changed after It Has Been Checked Exception
+```
+@Component({
+  changeDetection: ChangeDetectionStrategy.OnPush, // this is import { ChangeDetectionStrategy } from '@angular/core';
+
+  selector: 'app-publish',
+  templateUrl: './publish.component.html',
+  styleUrls: ['./publish.component.scss']
+})
+```
