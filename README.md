@@ -256,7 +256,11 @@ products: Product[];
       .subscribe(data => this.products = data);
   }
 ``
-
+## 4 Ways to share the data between components
+- @Input
+- @Output event.Emit
+- @Viewchild
+- @rxjs Subject
 
 ## Directive
 
