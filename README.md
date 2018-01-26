@@ -258,6 +258,8 @@ products: Product[];
 ``
 ## 4 Ways to share the data between components
 - @Input
+Declares an input property that you can update via property binding (example: <my-cmp [myProperty]="someExpression">).
+
 - @Output event.Emit
 - @Viewchild
 - @rxjs Subject
