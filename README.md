@@ -257,12 +257,30 @@ products: Product[];
   }
 ``
 ## 4 Ways to share the data between components
-- @Input
+- @Input() myProperty;
 Declares an input property that you can update via property binding (example: <my-cmp [myProperty]="someExpression">).
 
-- @Output event.Emit
-- @Viewchild
+- @Output() myEvent = new EventEmitter();	
+Declares an output property that fires events that you can subscribe to with an event binding (example: <my-cmp (myEvent)="doSomething()">).
+
+- @ViewChild(myPredicate) myChildComponent;	
+Binds the first result of the component view query (myPredicate) to a property (myChildComponent) of the class. Not available for directives.
+
+- @ViewChildren(myPredicate) myChildComponents;	
+Binds the results of the component view query (myPredicate) to a property (myChildComponents) of the class. Not available for directives.
+
 - @rxjs Subject
+
+## Dependency injection configuration	
+- { provide: MyService, useClass: MyMockService }	
+Sets or overrides the provider for MyService to the MyMockService class.
+
+- { provide: MyService, useFactory: myFactory }	
+Sets or overrides the provider for MyService to the myFactory factory function.
+
+- { provide: MyValue, useValue: 41 }	
+Sets or overrides the provider for MyValue to the value 41.
+
 
 ## Directive
 
