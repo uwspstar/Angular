@@ -442,7 +442,13 @@ constructor(private config: ConfigFileService,
  @Input('inputItem') inputItem :any;
  
 ```
+## ChangeDetectorRef
+```
+private cdr: ChangeDetectorRef
+After you load data in OnInit(), just call detectChanges() method to manually run change detection:
 
+this.cdr.detectChanges();
+```
 ## FormsModule is Required for Two-Way-Binding! : 
 
 ```javascript
