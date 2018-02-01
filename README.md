@@ -444,10 +444,29 @@ constructor(private config: ConfigFileService,
 ```
 ## ChangeDetectorRef
 ```
+
+if your service call on ngOnInit() not display load data in html page, just call detectChanges() method to manually run change detection:
+
+
 private cdr: ChangeDetectorRef
-After you load data in OnInit(), just call detectChanges() method to manually run change detection:
+// After you load data in OnInit(), just call detectChanges() method to manually run change detection:
 
 this.cdr.detectChanges();
+
+for example:
+ngOnInit() {
+this.publish.getUnpublishedEnviromentByPackageID(this.setConfigID)
+      .subscribe(
+      (data) => {
+        this.enviroments = data as (Array<Enviroment>);
+        this.cdr.detectChanges(); //detectChange
+      },
+      (err) => {
+        this.alertService.error('error on find the publish envirment');
+        this.router.navigate(['/']);
+      }
+      );
+ }
 ```
 ## FormsModule is Required for Two-Way-Binding! : 
 
