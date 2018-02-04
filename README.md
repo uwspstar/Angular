@@ -365,6 +365,35 @@ takeUntil, throttle, timeout, toArray, toPromise, withLatestFrom, zip
 ```
 data => this.arrayData = [data, ...this.arryData];
 
+- Add to the end of an Array
+
+var newLength = fruits.push('Orange');
+// ["Apple", "Banana", "Orange"]
+- Remove from the end of an Array
+
+var last = fruits.pop(); // remove Orange (from the end)
+// ["Apple", "Banana"];
+- Remove from the front of an Array
+
+var first = fruits.shift(); // remove Apple from the front
+// ["Banana"];
+- Add to the front of an Array
+
+var newLength = fruits.unshift('Strawberry') // add to the front
+// ["Strawberry", "Banana"];
+- Find the index of an item in the Array
+
+fruits.push('Mango');
+// ["Strawberry", "Banana", "Mango"]
+
+var pos = fruits.indexOf('Banana');
+// 1
+- Remove an item by index position
+
+var removedItem = fruits.splice(pos, 1); // this is how to remove an item
+                                        
+// ["Strawberry", "Mango"]
+
 ```
 ## material stepper back to step 0
 ```
