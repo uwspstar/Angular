@@ -361,7 +361,11 @@ takeUntil, throttle, timeout, toArray, toPromise, withLatestFrom, zip
  */
 
 ```
+## add the data to the top of Array
+```
+data => this.arrayData = [data, ...this.arryData];
 
+```
 ## material stepper back to step 0
 ```
 <mat-horizontal-stepper [linear]="true" #stepper>
