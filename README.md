@@ -561,6 +561,12 @@ export class AppErrorHandler implements ErrorHandler {
 //app.module.ts
 
 ```
+
+###
+
+[HashLocationStrategy vs PathLocationStrategy](https://codecraft.tv/courses/angular/routing/routing-strategies/)
+
+
 ### Exception
 - `Expression has changed after it was checked`
 
