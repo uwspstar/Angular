@@ -562,7 +562,7 @@ export class AppErrorHandler implements ErrorHandler {
 
 ```
 
-###
+### HashLocationStrategy vs PathLocationStrategy
 
 [HashLocationStrategy vs PathLocationStrategy](https://codecraft.tv/courses/angular/routing/routing-strategies/)
 
