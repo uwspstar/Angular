@@ -181,9 +181,12 @@ export class MaterialsModule { }
     "workbench.colorCustomizations": {
         "terminal.foreground": "#00FD61",
         "terminal.background": "#383737"
+    },
+    "git.ignoreMissingGitWarning": true,
+    "files.associations": {
+        "*.json": "jsonc"
     }
 }
-
 
 ```
 ## VS Code Extensions
