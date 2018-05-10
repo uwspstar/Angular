@@ -1,3 +1,5 @@
+ this.selectedFile = event.target.files[0];
+
 # FileUpload
 See Original Source from Youtube by Academind
 
