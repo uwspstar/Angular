@@ -14,6 +14,9 @@
 
 - 5 . Install Angular Cli from [https://cli.angular.io/](https://cli.angular.io/)
 
+## Angular files
+![Angular files](/angularfiles.jpg)
+
 ## Angular Cli Command line
 
 ```javascript
