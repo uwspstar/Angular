@@ -20,6 +20,8 @@
 ## Angular Cli Command line
 
 ```javascript
+//get the latest cli
+$npm install angular-cli@latest
 
 $ ng new demoMT --style=scss --routing
 
