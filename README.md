@@ -1,4 +1,5 @@
 # Angular 
+- What’s new in Angular 7.0?[https://medium.freecodecamp.org/whats-new-in-angular-7-0-and-how-to-upgrade-f2ed22a79e28]
 - Angular [https://angular.io](https://angular.io)
 - Angular 6 with Angular Cli 6 [https://www.ngdevelop.tech/angular-cli-6-angular-material-6-features/]
 
