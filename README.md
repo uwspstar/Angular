@@ -22,7 +22,7 @@
 
 ```javascript
 //get the latest cli
-$ npm install angular-cli@latest
+$ npm i -g @angular/cli
 
 $ ng new demoMT --style=scss --routing
 
