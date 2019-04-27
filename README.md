@@ -174,6 +174,7 @@ export class MaterialsModule { }
 {
     "workbench.sideBar.location": "right",
     "window.zoomLevel": 2,
+    "prettier.singleQuote": true,
     "vsicons.projectDetection.autoReload": true,
     "workbench.iconTheme": "vscode-icons",
     "editor.formatOnSave": true,
