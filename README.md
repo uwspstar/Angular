@@ -553,7 +553,7 @@ import { FormsModule } from '@angular/forms';
 `Jasonwatmore`
 - [notifications](http://jasonwatmore.com/post/2017/06/25/angular-2-4-alert-toaster-notifications)
 - [communicating-between-components](http://jasonwatmore.com/post/2016/12/01/angular-2-communicating-between-components-with-observable-subject)
-
+- https://fireship.io/
 
 ### Error handler
 
