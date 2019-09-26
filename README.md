@@ -672,3 +672,12 @@ While some may access everything, access for others might be restricted to only 
 The level of access is authorization.
 ```
 - http://jasonwatmore.com/post/2018/11/16/angular-7-jwt-authentication-example-tutorial
+
+- the difference between an Annotation and a Decorator in Angular?
+```
+annotations are used for creating an annotation array. 
+They are only metadata set of the class using the Reflect Metadata library.
+
+Decorators in Angular are design patterns used for separating decoration 
+or modification of some class without changing the original source code.
+```
