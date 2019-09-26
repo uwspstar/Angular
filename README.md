@@ -269,16 +269,20 @@ products: Product[];
 ``
 ## 4 Ways to share the data between components
 - @Input() myProperty;
-Declares an input property that you can update via property binding (example: <my-cmp [myProperty]="someExpression">).
+Declares an input property that you can update via property binding 
+(example: <my-cmp [myProperty]="someExpression">).
 
 - @Output() myEvent = new EventEmitter();	
-Declares an output property that fires events that you can subscribe to with an event binding (example: <my-cmp (myEvent)="doSomething()">).
+Declares an output property that fires events that you can subscribe to with an event binding 
+(example: <my-cmp (myEvent)="doSomething()">).
 
 - @ViewChild(myPredicate) myChildComponent;	
-Binds the first result of the component view query (myPredicate) to a property (myChildComponent) of the class. Not available for directives.
+Binds the first result of the component view query (myPredicate) 
+to a property (myChildComponent) of the class. Not available for directives.
 
 - @ViewChildren(myPredicate) myChildComponents;	
-Binds the results of the component view query (myPredicate) to a property (myChildComponents) of the class. Not available for directives.
+Binds the results of the component view query (myPredicate) 
+to a property (myChildComponents) of the class. Not available for directives.
 
 - @rxjs Subject
 
@@ -489,7 +493,8 @@ constructor(private config: ConfigFileService,
 ## ChangeDetectorRef
 ```
 
-if your service call on ngOnInit() not display load data in html page, just call detectChanges() method to manually run change detection:
+if your service call on ngOnInit() not display load data in html page, 
+just call detectChanges() method to manually run change detection:
 
 
 private cdr: ChangeDetectorRef
@@ -516,7 +521,8 @@ this.publish.getUnpublishedEnviromentByPackageID(this.setConfigID)
 
 ```javascript
 
-Important: For Two-Way-Binding to work, you need to enable the ngModel  directive. This is done by adding the FormsModule  to the imports[]  array in the AppModule.
+Important: For Two-Way-Binding to work, you need to enable the ngModel  directive. 
+This is done by adding the FormsModule  to the imports[]  array in the AppModule.
 
 You then also need to add the import from @angular/forms  in the app.module.ts file:
 
