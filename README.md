@@ -681,3 +681,4 @@ They are only metadata set of the class using the Reflect Metadata library.
 Decorators in Angular are design patterns used for separating decoration 
 or modification of some class without changing the original source code.
 ```
+- https://angular.io/guide/architecture
