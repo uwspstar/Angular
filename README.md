@@ -464,7 +464,8 @@ constructor(private config: ConfigFileService,
 ```
 ## Security
 ```
--  Frontend security is great for the user experience, but does not provide real security. Backend database rules is the only way to truly protect your data.
+-  Frontend security is great for the user experience, but does not provide real security. 
+Backend database rules is the only way to truly protect your data.
 
 ```
 ## Data Binding
@@ -647,4 +648,15 @@ We can display all kind of properties data into view e.g. string, number, date, 
 Data binding consist of one way data binding and two way data binding. 
 Interpolation is used for one way data binding. 
 Interpolation moves data in one direction from our components to HTML elements.
+```
+- Difference between Interpolation and Property Binding
+```
+Interpolation is a special syntax that Angular converts into property binding (pair of square bracket). 
+It’s a convenient alternative to property binding.
+
+Another major difference is that to set an element property to a non-string data value, 
+we must use property binding.
+
+<button [disabled]='isDisabled'>OK</button>             //Data binding 
+<button disabled='{{isDisabled}}'>Cancel</button>       //Interpolation
 ```
