@@ -626,7 +626,8 @@ export class AppErrorHandler implements ErrorHandler {
 })
 ```
 - Could you explain services in Angular?
-Answer: Singleton objects in Angular 
+```
+Singleton objects in Angular 
 that get instantiated only once during the lifetime of an application are called services. 
 An Angular service contains methods that maintain the data throughout the life of an application.
 
@@ -634,4 +635,16 @@ The primary intent of an Angular service is to
 organize as well as share business logic, models, or data and functions 
 with various components of an Angular application.
 
-The functions offered by an Angular service can be invoked from any Angular component, such as a controller or directive.
+The functions offered by an Angular service 
+can be invoked from any Angular component, such as a controller or directive.
+```
+- What is Angular Interpolation? ```display a component property with double curly braces```
+```
+Angular interpolation is used display a component property 
+in the respective view template with double curly braces syntax. 
+We can display all kind of properties data into view e.g. string, number, date, arrays, list or map.
+
+Data binding consist of one way data binding and two way data binding. 
+Interpolation is used for one way data binding. 
+Interpolation moves data in one direction from our components to HTML elements.
+```
