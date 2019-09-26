@@ -660,3 +660,15 @@ we must use property binding.
 <button [disabled]='isDisabled'>OK</button>             //Data binding 
 <button disabled='{{isDisabled}}'>Cancel</button>       //Interpolation
 ```
+- Angular Authentication and Authorization.
+```
+The user login credentials are passed to an authenticate API, 
+which is present on the server. Post server-side validation of the credentials, 
+a JWT (JSON Web Token) is returned. The JWT has information or attributes regarding the current user. 
+The user is then identified with the given JWT. This is called authentication.
+
+Post logging-in successfully, different users have a different level of access. 
+While some may access everything, access for others might be restricted to only some resources. 
+The level of access is authorization.
+```
+- http://jasonwatmore.com/post/2018/11/16/angular-7-jwt-authentication-example-tutorial
