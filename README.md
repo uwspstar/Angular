@@ -36,7 +36,13 @@ $ ng g s services/backendApi --module=app.module
 // with special moule
 $ ng g s services/backendApi --module=services/services.module 
 
-
+$ ng g s service/calc --flat
+ 
+//Other useful options
+ 
+--force  = override
+--spec=false = dont generate spec file
+--dry-run = dont touch code if it has been updated already.
 
 ```
 
