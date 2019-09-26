@@ -382,6 +382,9 @@ takeUntil, throttle, timeout, toArray, toPromise, withLatestFrom, zip
  */
 
 ```
+- What is the difference between declarations, providers, and import in NgModule?
+https://stackoverflow.com/questions/39062930/what-is-the-difference-between-declarations-providers-and-import-in-ngmodule
+
 ## add the data to the top of Array
 ```
 data => this.arrayData = [data, ...this.arryData];
