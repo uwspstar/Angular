@@ -130,3 +130,14 @@ Select the statements about its use (in another components template or module) t
 - <welcome></welcome> will display nothing.
 - @NgModule({ declarations: [ WelcomeComponent ] }) export class WelcomeModule {} declares that the welcome component belongs to the welcome module.
 - <hello name="{{ name }}"></hello> will display: "Welcome to name!".
+
+### COMPONENTS
+Which of the following statements about components in Angular are correct? ```BCF```
+
+(Select all acceptable answers.)
+- The properties of a component's children are available in the component's constructor.
+- When a component depends on a service, the injector can be used to configure  dependency injection.
+- A component defines its input parameters with the @Input decorator.
+- A component is a type of directive and as such, should be defined by the Directive class decorator.
+- A component selector must reference the class name in lowercase hyphenated format.
+- A components ngOnDestroy method is called just before Angular destroys the component.
