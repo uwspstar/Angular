@@ -35,7 +35,7 @@ Which of the following statements about the routers behavior are correct?
 4) /detail/100 will use the <router-outlet name='route1'> to determine the position of the view.
 5) Route that redirects to HomeComponent would activate on same routes if the pathMatch: 'full' property was removed.
 
-Consider the following components:
+### Consider the following components: one-way binds
 ```
 export class Address {
   street: String;
