@@ -108,3 +108,25 @@ Select the statements about the AnimalNoise component that are correct.
 - The 'animal' parameter of the @Input('animal') declaration does not alter the interface of the component.
 - When included in a components template, the AnimalNoise component creates a span containing the interpolated animals name and a button bound to makeNoise().
 - The AnimalNoise component can be included in another template using the <AnimalNoise> tag.
+
+### Consider the following component: ```AC```
+```
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'welcome',
+  template: `<h1>Welcome to {{name}}!</h1>`,
+  styles: [`h1 { font-family: Lato; }`]
+})
+export class WelcomeComponent  {
+  @Input() name: string;
+}
+```
+Select the statements about its use (in another components template or module) that are correct.
+
+(Select all acceptable answers.)
+
+- <welcome name="TestDome"></welcome> will display: "Welcome to TestDome!".
+- <welcome></welcome> will display nothing.
+- @NgModule({ declarations: [ WelcomeComponent ] }) export class WelcomeModule {} declares that the welcome component belongs to the welcome module.
+- <hello name="{{ name }}"></hello> will display: "Welcome to name!".
