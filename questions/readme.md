@@ -34,3 +34,48 @@ Which of the following statements about the routers behavior are correct?
 3) Optional parameters can be passed to any component via the query parameters of the ActivatedRoute.
 4) /detail/100 will use the <router-outlet name='route1'> to determine the position of the view.
 5) Route that redirects to HomeComponent would activate on same routes if the pathMatch: 'full' property was removed.
+
+Consider the following components:
+```
+export class Address {
+  street: String;
+  city: String;
+  zipCode: String;
+}
+
+@Component({
+  selector: 'app-address',
+  templateUrl: './address.component.html',
+  styleUrls: ['./address.component.css']
+})
+export class AddressComponent implements OnInit {
+
+  @Input() address: Address;
+  constructor() { }
+
+  ngOnInit() {
+  }
+}
+
+@Component({
+  selector: 'app-address-list',
+  templateUrl: './address-list.component.html',
+  styleUrls: ['./address-list.component.css']
+})
+export class AddressListComponent implements OnInit {
+
+  @Input() addresses: Address[];
+  constructor() { }
+
+  ngOnInit() {
+  }
+}
+```
+Below is the file address-list.component.html. Fill in the blanks, so that the template renders one li element per address and it correctly one-way binds each address to the AddressComponent field.
+```
+<ul>
+  <li *ngFor="let address of addresses">
+    <app-address [address]="address"></app-address>
+  </li>
+</ul>
+```
