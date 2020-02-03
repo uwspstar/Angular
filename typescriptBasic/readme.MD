@@ -1,3 +1,4 @@
+# Typescript
 //install typescript globle
 $ sudo npm install -g typescript
 
