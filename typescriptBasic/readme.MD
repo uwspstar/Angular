@@ -1,4 +1,16 @@
 # Typescript
+- In Typescript, a custom object type can also implement an Interface!
+```
+interface Course { name:string; }
+ 
+let course : Course = { name: 'Components' };
+ 
+course.name = 'Components and Directives';
+ 
+course.lessonCount = 20;
+ 
+```
+
 //install typescript globle
 $ sudo npm install -g typescript
 
