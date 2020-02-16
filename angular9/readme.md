@@ -5,3 +5,10 @@
 ### Angular CLI
 - https://angular.io/cli
 - https://github.com/angular/angular-cli/wiki
+### tsconfig.json
+```
+"angularCompilerOptions" : {
+   "fullTemplateTypeCheck": true,
+   "strictInjectionParameters" : true
+}
+```
